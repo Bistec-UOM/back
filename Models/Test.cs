@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Test
+    public class Test
     {
         public string TestName { get; set; } = null!;
         public float Price { get; set; }

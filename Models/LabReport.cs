@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class LabReport
+    public class LabReport
     {
         public string ReportID { get; set; } = null!;
         public string PrescriptID { get; set; } = null!;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Patient_Tele
+    public class Patient_Tele
     {
         public int Id { get; set; }
         public int telephonenumber { get; set; }

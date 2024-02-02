@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Record
+    public class Record
     {
         public string ReportID { get; set; } = null!;
         public string FieldName { get; set; } = null!;
