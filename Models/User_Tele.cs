@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class User_Tele
+    public class User_Tele
     {
         public int Id { get; set; }
         public int telephonenumber { get; set; }
         [JsonIgnore]
-        public Users? Users { get; set; }
+        public User? Users { get; set; }
     }
 }
