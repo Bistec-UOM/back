@@ -13,9 +13,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
-    options.UseInMemoryDatabase("ApplicationDbContextnew");
+    option.UseSqlServer(builder.Configuration.GetConnectionString("defaultString"));
 });
 
 //add new injection

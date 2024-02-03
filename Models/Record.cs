@@ -8,7 +8,7 @@ namespace Models
 {
     public class Record
     {
-        public string ReportID { get; set; } = null!;
+        public int Id { get; set; } 
         public string FieldName { get; set; } = null!;
         public float Result { get; set; }
         public string Status { get; set; } = null!;
