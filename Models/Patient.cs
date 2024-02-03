@@ -15,7 +15,6 @@ namespace Models
         public int DOB { get; set; }
         public string? Address { get; set; }
         public string? Email { get; set; }
-        [JsonIgnore]
-        public List<User_Tele>? TelephoneNumbers { get; set; }
+
     }
 }

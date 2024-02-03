@@ -12,7 +12,6 @@ namespace Models
         public string? Gender { get; set;}
         public string? Address { get; set;}
         public string? Qualifications { get; set;}
-        [JsonIgnore]
-        public List<Patient_Tele>? TelephoneNumbers { get; set; }
+
     }
 }

@@ -11,7 +11,6 @@ namespace Models
     {
         public int Id { get; set; }
         public int telephonenumber { get; set; }
-        [JsonIgnore]
-        public Patient? patient { get; set; }
+
     }
 }
