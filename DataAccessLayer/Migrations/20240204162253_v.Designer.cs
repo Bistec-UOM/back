@@ -4,6 +4,7 @@ using DataAccessLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240204162253_v")]
+    partial class v
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,37 +232,20 @@ namespace DataAccessLayer.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserID");
+
                     b.ToTable("user_teles");
                 });
 
-            modelBuilder.Entity("UserUser_Tele", b =>
+            modelBuilder.Entity("Models.User_Tele", b =>
                 {
-                    b.Property<int>("TelesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("usersId")
-                        .HasColumnType("int");
-
-                    b.HasKey("TelesId", "usersId");
-
-                    b.HasIndex("usersId");
-
-                    b.ToTable("UserUser_Tele");
-                });
-
-            modelBuilder.Entity("UserUser_Tele", b =>
-                {
-                    b.HasOne("Models.User_Tele", null)
+                    b.HasOne("Models.User", "user")
                         .WithMany()
-                        .HasForeignKey("TelesId")
+                        .HasForeignKey("UserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Models.User", null)
-                        .WithMany()
-                        .HasForeignKey("usersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("user");
                 });
 #pragma warning restore 612, 618
         }
