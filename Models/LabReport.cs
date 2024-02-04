@@ -8,6 +8,7 @@ namespace Models
 {
     public class LabReport
     {
+        
         public int Id { get; set; }
         public string PrescriptID { get; set; } = null!;
         public TimeOnly Time {  get; set; }
