@@ -8,6 +8,7 @@ namespace Models
 {
     public class ReportFileds
     {
+        public int Id { get; set; }
         public string TestName { get; set; } = null!;
         public string Fieldname {  get; set; } = null!;
         public short Index {  get; set; }
