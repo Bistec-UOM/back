@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    internal class Unable_Date
+    public class Unable_Date
     {
+        public int UserId { get; set; }
+        public DateOnly Date {  get; set; }
+
+
     }
 }
